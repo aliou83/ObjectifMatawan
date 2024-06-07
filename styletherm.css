@@ -1,0 +1,244 @@
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.thermometer {
+    position: relative;
+    width: 300px;
+    margin: 0 auto;
+    padding-left: 40px;
+
+}
+
+.thermometer::after {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 10px;
+    width: 12px;
+    height: 99%;
+    height: calc(100% - 20px);
+    background-color: purple;
+    z-index: 1;
+
+}
+
+.stop {
+    position: relative;
+    padding: 5px 10px;
+    text-align: left;
+    z-index: 2;
+    background-color: white;
+    margin: 5px 0;
+}
+
+.stop::before {
+    content: '';
+    position: absolute;
+    left: -27px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 10px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(2, 2, 2);
+    border-radius: 0;
+    z-index: 3;
+}
+
+.stop.from-renoir::before,
+.stop.from-chalet::before {
+    border: 2px solid rgb(3, 3, 3);
+}
+
+.stop.from-renoir::after,
+.stop.from-chalet::after {
+    content: '';
+    position: absolute;
+    left: -19px;
+    top: 30px;
+    width: 10px;
+    background-color: purple;
+    z-index: 0;
+}
+
+.stop.from-renoir::after {
+    height: calc(100% + 50px);
+    top: -15px;
+}
+
+.stop.from-chalet::after {
+    height: calc(100% + 20px);
+    top: -15px;
+}
+
+.stop.from-renoir {
+    margin-left: 50px;
+}
+
+#Renoir::after,
+#Olympia::after,
+#FleuryVal::after {
+    content: '';
+    position: absolute;
+    height: calc(100% + 120px);
+    width: 10px;
+    background-color: purple;
+    left: -20px;
+    top: -10px;
+    z-index: 0;
+}
+
+
+#Renoir::after {
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 60px;
+    background-color: purple;
+    left: -70px;
+    top: 20%;
+    transform: translateY(-60%);
+    z-index: 2;
+}
+
+#Chalet::after {
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 40px;
+    background-color: purple;
+    left: -49px;
+    top: 10%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+#Lauriers::after {
+    content: '';
+    position: absolute;
+    height: 08px;
+    width: 40px;
+    background-color: purple;
+    left: -19px;
+    top: 10%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.stop.from-chalet {
+    margin-left: 80px;
+}
+
+.stop.here {
+    color: red;
+}
+
+.stop.here::before {
+    background-color: black;
+}
+
+#PiscineYvesBlanc,
+#LaChevaliere {
+    font-weight: bold;
+}
+
+#PiscineYvesBlanc::before,
+#LaChevaliere::before {
+    width: 25px;
+    height: 15px;
+    background-color: rgb(3, 3, 3);
+    border: none;
+    border-radius: 0;
+    left: -30px;
+}
+
+#beauvallon::before {
+    width: 25px;
+    height: 35px;
+    background-color: rgb(3, 3, 3);
+    border: none;
+    border-radius: 0;
+    left: -27px;
+
+}
+
+#Beauvallon {
+    position: relative;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(8, 3, 3);
+    margin: 5px 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    margin-left: 20px;
+
+}
+
+#Beauvallon::before {
+    content: '';
+    position: absolute;
+    left: -29px;
+    top: 70%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 15px;
+    background-color: rgb(3, 3, 3);
+    border: none;
+    border-radius: 0;
+    z-index: 3;
+}
+
+
+#CimetiereStPierre::before {
+    width: 20px;
+    height: 15px;
+    background-color: rgb(3, 3, 3);
+    border: none;
+    border-radius: 100px;
+    left: -25px;
+}
+
+
+#PiscineYvesBlanc,
+#LaChevaliere,
+#Beauvallon {
+    position: relative;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    margin: 5px 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    width: 210px;
+}
+
+
+#PiscineYvesBlanc .stop-name {
+    margin-left: 20px;
+}
+
+.square {
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    background-color: purple;
+    color: white;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 5px;
+    border-radius: 0px;
+
+}
+
+.square.from-renoir {
+    margin-left: 15px;
+}
+
+#Beauvallon {
+    margin-left: 50px;
+
+}
